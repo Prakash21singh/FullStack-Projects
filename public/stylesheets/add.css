@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+}
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-color: #f2f2f2;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 11;
+  text-align: center;
+}
+.container::before {
+  content: "";
+  position: absolute;
+  top: 40%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  height: 100%;
+  background: url("../images/wave.svg");
+  background-repeat: no-repeat;
+  object-fit: contain;
+  z-index: -1;
+}
+
+form {
+  width: 25%;
+  background: white;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.183),
+    inset 2px 2px 20px rgba(255, 255, 255, 0.148);
+}
+form div {
+  justify-content: start;
+  display: flex;
+  align-items: self-start;
+  flex-direction: column;
+  width: 100%;
+  margin: 10px;
+}
+form div input {
+  width: 100%;
+  padding: 10px;
+}
+form div label {
+  font-weight: 800;
+}
+
+form div button {
+  width: 100%;
+  padding: 10px;
+}

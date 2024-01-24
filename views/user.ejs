@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Company employees</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="/stylesheets/user.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Employees Data</h1>
+      <a href="/user/add">
+        <button class="add">Add New</button>
+      </a>
+      <div class="data">
+        <% for (el of user) { %>
+        <div class="data-item">
+          <div class="top">
+            <div>
+              <b>Employee Name:</b> <br />
+              <%=el.USERNAME %>
+            </div>
+            <div><b>Joining Period:</b><br /><%=el.DATE %></div>
+            <div><b>Email:</b><br /><%=el.EMAIL %></div>
+          </div>
+          <div class="bottom">
+            <a href="/user/<%=el.ID%>/edit">
+              <button class="edit">edit</button>
+            </a>
+            <a href="/user/<%=el.ID%>/delete">
+              <button class="delete">Delete</button>
+            </a>
+          </div>
+        </div>
+        <% } %>
+      </div>
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+      integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"></script>
+    <script src="/javascripts/user.js"></script>
+  </body>
+</html>
